@@ -4,7 +4,7 @@ from BostonHousing.boston_model import get_model
 import tensorflow as tf
 
 
-class BostonHosingLearn():
+class BostonHosingLearn:
     def __init__(self):
         self.boston_housing = tf.keras.datasets.boston_housing
         self.model = None

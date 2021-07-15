@@ -2,8 +2,8 @@ import tensorflow as tf
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-a = tf.constant(1.)
-b = tf.constant(2.)
 
-print('INFO:', a+b)
-print('GPU:', tf.test.is_gpu_available())
+# https://zhuanlan.zhihu.com/p/343769603
+if __name__ == '__main__':
+    print('VERSION:', tf.__version__)
+    print('GPU:', tf.config.list_physical_devices('GPU'))

@@ -3,7 +3,7 @@ from Reuters.reuters_model import get_model
 import tensorflow as tf
 
 
-class ReutersLearn():
+class ReutersLearn:
     def __init__(self):
         self.reuters = tf.keras.datasets.reuters
         self.x_val = list()

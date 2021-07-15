@@ -4,7 +4,7 @@ from IMDB.imdb_model import get_model
 import tensorflow as tf
 
 
-class IMDALearn():
+class IMDALearn:
     def __init__(self):
         self.im_db = tf.keras.datasets.imdb
         self.x_val = list()

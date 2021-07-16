@@ -1,6 +1,27 @@
 import tensorflow as tf
 import numpy as np
 import cv2
+from PIL import Image
+
+
+# 手动二值化 翻转黑白
+def get_static_binary_image(gray_img, out_image_path=None, threshold=140, reverse=True):
+    w, h = len(gray_img), len(gray_img[0])
+    for y in range(h):
+        for x in range(w):
+            if reverse:
+                if gray_img[x, y] < threshold:
+                    gray_img[x, y] = 255
+                else:
+                    gray_img[x, y] = 0
+            else:
+                if gray_img[x, y] < threshold:
+                    gray_img[x, y] = 0
+                else:
+                    gray_img[x, y] = 255
+    if out_image_path:
+        cv2.imwrite(out_image_path, gray_img)
+    return gray_img
 
 
 def cut_image_to_4(gray_img, cut_num=4):
@@ -28,9 +49,17 @@ def _preprocess_image(image, img_h=28, img_w=28):
     return image
 
 
+def resize_image(file_path, out_img_path, img_h=50, img_w=150):
+    image = Image.open(file_path)
+    resized_image = image.resize((img_w, img_h), Image.ANTIALIAS)
+    resized_image.save(out_img_path)
+
+
+# 识别之前 去噪 转为向量
 def shape_image(img_path, img_h=28, img_w=28):
     x_data = []
     origin_img = get_dynamic_binary_image(img_path)                        # 读取图片
+    origin_img = get_static_binary_image(origin_img, out_image_path=img_path)
     origin_img = np.array(origin_img)
     x_data.append(origin_img)
     x_data = np.array(x_data).astype(np.float32)

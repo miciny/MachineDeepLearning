@@ -1,7 +1,8 @@
 import tensorflow as tf
-from MNIST.mnist_funcs import show_image, plot_value_array
+from Utils.ShowPlot import show_image, plot_value_array
 from tensorflow import keras
 import numpy as np
+from OcrImgProgress.PreSetOcrImage import shape_mine_img, cut_image_to_4, get_dynamic_binary_image
 
 
 # 保存地址
@@ -80,9 +81,10 @@ def ocr_image():
     new_model = tf.keras.models.load_model(keras_model_path)
 
     print("==============处理单张图片==============")
-    train_images, train_labels, test_images, test_labels = _data_and_pre()
-    # train_image = train_images[7]
-    train_image = shape_mine_img()
+    test_labels = range(10)
+
+    img_path = './data/img-cut_7.jpg'
+    train_image = shape_mine_img(img_path)
 
     img = (np.expand_dims(train_image, 0))
 
@@ -91,23 +93,7 @@ def ocr_image():
     print(predictions_single[0])
     print(np.argmax(predictions_single[0]))
 
-    plot_value_array(1, predictions_single[0], test_labels)
-
-
-def shape_mine_img():
-    img_path = './data/img.png'
-    image = tf.io.read_file(img_path)
-    train_images = np.asarray(preprocess_image(image))
-    train_images = train_images.reshape((-1, 28 * 28))
-    return train_images[0]
-
-
-def preprocess_image(image):
-    image = tf.image.decode_jpeg(image, channels=1)
-    image = tf.image.resize(image, [28, 28])
-    image /= 255.0  # normalize to [0,1] range
-    image = tf.reshape(image, [28, 28])
-    return image
+    plot_value_array(predictions_single[0], test_labels)
 
 
 if __name__ == "__main__":

@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MNIST/data/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/saved_model.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyDeepLearning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyDeepLearning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BostonHousing/boston_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/BostonHousing/boston_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/imdb_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/IMDB/imdb_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/mnist_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/mnist_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/mnist_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuters/reuters_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reuters/reuters_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/EGG-INFO/PKG-INFO" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/EGG-INFO/SOURCES.txt" beforeDir="false" />
@@ -59,7 +46,6 @@
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/models/format_control.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/models/index.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/models/link.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/operations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/operations/check.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/operations/freeze.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/operations/prepare.py" beforeDir="false" />
@@ -584,6 +570,14 @@
       <workItem from="1574934955378" duration="1622000" />
       <workItem from="1574938133098" duration="18801000" />
     </task>
+    <task id="LOCAL-00001" summary="change">
+      <created>1626354720563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626354720563</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,5 +596,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="change" />
+    <option name="LAST_COMMIT_MESSAGE" value="change" />
   </component>
 </project>

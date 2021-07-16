@@ -12,7 +12,8 @@ def fit_and_save():
     train_images, train_labels, vel_images, vel_labels = get_data()
 
     print("==============训练中==============")
-    history = model.fit(train_images, train_labels, epochs=5, batch_size=128)
+    history = model.fit(train_images, train_labels, epochs=20, batch_size=128)
+    print(history)
 
     print("==============测试训练集==============")
     test_loss, test_acc = model.evaluate(vel_images, vel_labels)

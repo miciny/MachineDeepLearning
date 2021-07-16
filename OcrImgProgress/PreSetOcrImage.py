@@ -28,6 +28,16 @@ def _preprocess_image(image, img_h=28, img_w=28):
     return image
 
 
+def shape_image(img_path, img_h=28, img_w=28):
+    x_data = []
+    origin_img = get_dynamic_binary_image(img_path)                        # 读取图片
+    origin_img = np.array(origin_img)
+    x_data.append(origin_img)
+    x_data = np.array(x_data).astype(np.float32)
+    train_images = x_data.reshape((len(x_data), img_w * img_h))
+    return train_images[0]
+
+
 # 自适应阀值二值化 灰度处理
 def get_dynamic_binary_image(origin_img_path):
     origin_img = cv2.imread(origin_img_path)                        # 读取图片

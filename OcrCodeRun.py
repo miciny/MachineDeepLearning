@@ -20,32 +20,31 @@ def ocr_image():
     print("==============识别==============")
     img_path = pro_dir + '/ImageToOcr/0Exk_captcha742.png'
 
-    train_image = shape_image(img_path, img_h=img_h, img_w=int(img_w / cut_num))
-    img = (np.expand_dims(train_image, 0))
+    # train_image = shape_image(img_path, img_h=img_h, img_w=int(img_w / cut_num))
+    # img = (np.expand_dims(train_image, 0))
+    # predictions_single = new_model.predict(img)
+    # print(len(predictions_single))
+    # print(predictions_single)
+    # index = np.argmax(predictions_single[0])
+    # print(index, characters[index])
 
-    predictions_single = new_model.predict(img)
-    print(len(predictions_single))
-    print(predictions_single)
-    index = np.argmax(predictions_single[0])
-    print(index, characters[index])
-
-    # resize_image(img_path, img_path)      # 调整大小
-    # captcha_image = get_dynamic_binary_image(img_path)
+    resize_image(img_path, img_path)      # 调整大小
+    captcha_image = get_dynamic_binary_image(img_path)
     # 切割图片 实际上识别单字母
-    # captcha_image_cut_list = cut_image_to_4(captcha_image)
+    captcha_image_cut_list = cut_image_to_4(captcha_image)
 
-    # out_str = ''
-    # for index, captcha_image_cut in enumerate(captcha_image_cut_list):
-    #     out_img_path = pro_dir + '/ImageToOcr/{}.jpg'.format(index)
-    #     cv2.imwrite(out_img_path, captcha_image_cut)
-    #     train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / cut_num))
-    #     img = (np.expand_dims(train_image, 0))
-    #
-    #     predictions_single = new_model.predict(img)
-    #     index = np.argmax(predictions_single[0])
-    #     print(index, characters[index])
-    #     out_str += characters[index]
-    # print('0Exk', out_str, out_str == '0Exk')
+    out_str = ''
+    for index, captcha_image_cut in enumerate(captcha_image_cut_list):
+        out_img_path = pro_dir + '/ImageToOcr/{}.jpg'.format(index)
+        cv2.imwrite(out_img_path, captcha_image_cut)
+        train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / cut_num))
+        img = (np.expand_dims(train_image, 0))
+
+        predictions_single = new_model.predict(img)
+        index = np.argmax(predictions_single[0])
+        print(index, characters[index])
+        out_str += characters[index]
+    print('0Exk', out_str, out_str == '0Exk')
 
 
 def ocr_single():

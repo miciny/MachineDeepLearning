@@ -40,21 +40,22 @@ def _gen_train_data(file_path):
             origin_img_path = os.path.join(file_path, selected_train_file_name)
             # 对图片去噪，后面对这个方法单独说明
             captcha_image = get_dynamic_binary_image(origin_img_path)
-            img_np = np.array(captcha_image)
-            x_data.append(img_np)
+            # img_np = np.array(captcha_image)
+            # x_data.append(img_np)
 
             # 切割图片 实际上识别单字母
-            # captcha_image_cut_list = cut_image_to_4(captcha_image)
-            # for i, captcha_image_cut in enumerate(captcha_image_cut_list):
-            #     img_np = np.array(captcha_image_cut)
-            #     x_data.append(img_np)
+            captcha_image_cut_list = cut_image_to_4(captcha_image)
+            for i, captcha_image_cut in enumerate(captcha_image_cut_list):
+                img_np = np.array(captcha_image_cut)
+                x_data.append(img_np)
 
             name_list = list(selected_train_file_name.split('_')[0])
-            train_labels = _process_labels(name_list)
-            y_temp = np.array(train_labels)
-            y_data.append(y_temp)
-            # for y in y_temp:
-            #     y_data.append(y)
+            y_temp = np.array(name_list)
+            # train_labels = _process_labels(name_list)
+            # y_temp = np.array(train_labels)
+            # y_data.append(y_temp)
+            for y in y_temp:
+                y_data.append(y)
 
     x_data = np.array(x_data).astype(np.float32)
     y_data = np.array(y_data)
@@ -69,13 +70,13 @@ def get_data():
     # print(train_images.shape)
     # print(vel_images.shape)
 
-    # train_images = train_images.reshape((len(train_images), int(img_w / cut_num) * img_h))
+    train_images = train_images.reshape((len(train_images), int(img_w / cut_num) * img_h))
     train_images = train_images.astype('float32') / 255
-    # vel_images = vel_images.reshape((len(vel_images), int(img_w / cut_num) * img_h))
+    vel_images = vel_images.reshape((len(vel_images), int(img_w / cut_num) * img_h))
     vel_images = vel_images.astype('float32') / 255
 
-    # train_labels = _process_labels(train_labels)
-    # vel_labels = _process_labels(vel_labels)
+    train_labels = _process_labels(train_labels)
+    vel_labels = _process_labels(vel_labels)
     train_labels = tf.keras.utils.to_categorical(train_labels)
     vel_labels = tf.keras.utils.to_categorical(vel_labels)
     # train_labels = train_labels.reshape((len(train_labels), char_num * len(characters)))
@@ -96,9 +97,9 @@ def get_test_data():
     test_images = test_images.reshape((len(test_images), int(img_w / cut_num) * img_h))
     test_images = test_images.astype('float32') / 255
 
-    # test_labels = _process_labels(test_labels)
+    test_labels = _process_labels(test_labels)
     test_labels = tf.keras.utils.to_categorical(test_labels)
-    test_labels = test_labels.reshape((len(test_labels), char_num * len(characters)))
+    # test_labels = test_labels.reshape((len(test_labels), char_num * len(characters)))
 
     return test_images, test_labels
 

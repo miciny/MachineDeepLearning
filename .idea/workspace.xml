@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train">
+      <change afterPath="$PROJECT_DIR$/Common/Funcs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/ModelSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <recent name="D:\GitHub\WorkProject\MyDeepLearning\Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.OcrCodeRun">
+  <component name="RunManager" selected="Python.CreateCaptchaV2">
     <configuration name="CreateCaptcha" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,6 +81,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateCaptchaV2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MyDeepLearning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrainSetCreate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,35 +187,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mnist_learn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MyDeepLearning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MNIST" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MNIST/mnist_learn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CreateCaptchaV2" />
         <item itemvalue="Python.OcrCodeRun" />
         <item itemvalue="Python.FitSaveModel" />
         <item itemvalue="Python.TrainDataSet" />
         <item itemvalue="Python.CreateCaptcha" />
-        <item itemvalue="Python.mnist_learn" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626684997016</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="train">
+      <created>1626689447038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626689447038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

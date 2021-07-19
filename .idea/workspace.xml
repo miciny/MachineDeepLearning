@@ -4,12 +4,13 @@
     <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/ModelSet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/saved_model.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +72,7 @@
       <recent name="D:\GitHub\WorkProject\MyDeepLearning\Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.OcrCodeRun">
+  <component name="RunManager" selected="Python.FitSaveModel">
     <configuration name="CreateCaptcha" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,10 +195,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.OcrCodeRun" />
         <item itemvalue="Python.FitSaveModel" />
-        <item itemvalue="Python.CreateCaptcha" />
         <item itemvalue="Python.TrainDataSet" />
+        <item itemvalue="Python.OcrCodeRun" />
+        <item itemvalue="Python.CreateCaptcha" />
         <item itemvalue="Python.mnist_learn" />
       </list>
     </recent_temporary>
@@ -266,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626680285582</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="train">
+      <created>1626681556101</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626681556101</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

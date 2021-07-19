@@ -28,7 +28,7 @@ def draw_text(draw, text, font, captcha_width, captcha_height, spacing=20):
     # 得到这一窜字符的高度和宽度
     text_width, text_height = font.getsize(text)
     # 得到每个字体的大概宽度
-    every_value_width = int(text_width / 4)
+    every_value_width = int(text_width / char_num)
 
     # 这一窜字符的总长度
     text_length = len(text)

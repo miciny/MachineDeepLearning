@@ -35,5 +35,5 @@ def load_and_test():
 
 
 if __name__ == "__main__":
-    # fit_and_save()
-    load_and_test()
+    fit_and_save()
+    # load_and_test()

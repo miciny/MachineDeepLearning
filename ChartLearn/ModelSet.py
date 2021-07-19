@@ -1,5 +1,5 @@
 from tensorflow import keras
-from Config import characters, img_w, img_h, char_num
+from Config import characters, img_w, img_h, cut_num
 
 
 def get_model():
@@ -8,7 +8,7 @@ def get_model():
     # 两个中间层，一个输出层
     model.add(keras.layers.Dense(512,
                                  activation=keras.activations.relu,
-                                 input_shape=(img_h * int(img_w / char_num),)))
+                                 input_shape=(img_h * int(img_w / cut_num),)))
     model.add(keras.layers.Dense(len(characters),
                                  activation=keras.activations.softmax))
     # 选择优化器和损失函数

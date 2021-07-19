@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from OcrImgProgress.PreSetOcrImage import get_dynamic_binary_image, cut_image_to_4
-from Config import characters, img_w, img_h, char_num
+from Config import characters, img_w, img_h, cut_num
 import tensorflow as tf
 import cv2
 
@@ -64,9 +64,9 @@ def get_data():
     # print(train_images.shape)
     # print(vel_images.shape)
 
-    train_images = train_images.reshape((len(train_images), int(img_w / char_num) * img_h))
+    train_images = train_images.reshape((len(train_images), int(img_w / cut_num) * img_h))
     train_images = train_images.astype('float32') / 255
-    vel_images = vel_images.reshape((len(vel_images), int(img_w / char_num) * img_h))
+    vel_images = vel_images.reshape((len(vel_images), int(img_w / cut_num) * img_h))
     vel_images = vel_images.astype('float32') / 255
 
     train_labels = _process_labels(train_labels)
@@ -83,7 +83,7 @@ def get_test_data():
     # print(train_images.shape)
     # print(test_images.shape)
 
-    test_images = test_images.reshape((1000 * char_num, int(img_w / char_num) * img_h))
+    test_images = test_images.reshape((1000 * cut_num, int(img_w / cut_num) * img_h))
     test_images = test_images.astype('float32') / 255
 
     test_labels = _process_labels(test_labels)

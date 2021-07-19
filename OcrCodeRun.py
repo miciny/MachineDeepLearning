@@ -3,7 +3,7 @@ from OcrImgProgress.PreSetOcrImage import shape_mine_img, get_dynamic_binary_ima
 from Utils.ShowPlot import plot_value_array, show_image
 import tensorflow as tf
 import numpy as np
-from Config import characters, img_w, img_h, char_num
+from Config import characters, img_w, img_h, cut_num
 import cv2
 from RunTimeProperties import pro_dir
 import time
@@ -28,7 +28,7 @@ def ocr_image():
     for index, captcha_image_cut in enumerate(captcha_image_cut_list):
         out_img_path = pro_dir + '/ImageToOcr/{}.jpg'.format(index)
         cv2.imwrite(out_img_path, captcha_image_cut)
-        train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / char_num))
+        train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / cut_num))
         img = (np.expand_dims(train_image, 0))
 
         predictions_single = new_model.predict(img)
@@ -42,7 +42,7 @@ def ocr_single():
     print("==============加载模型==============")
     new_model = tf.keras.models.load_model(keras_model_path)
     out_img_path = './ImageToOcr/2.jpg'
-    train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / char_num))
+    train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / cut_num))
     img = (np.expand_dims(train_image, 0))
 
     predictions_single = new_model.predict(img)
@@ -81,8 +81,8 @@ def oct_other_img():
         cut_image_path = pro_dir + '/ImageToOcr/{}.png'.format(index)
         cv2.imwrite(cut_image_path, cut_image)
 
-        resize_image(cut_image_path, cut_image_path, img_w=int(img_w/char_num), img_h=img_h)  # 调整大小
-        train_image = shape_image(cut_image_path, img_h=img_h, img_w=int(img_w / char_num))
+        resize_image(cut_image_path, cut_image_path, img_w=int(img_w / cut_num), img_h=img_h)  # 调整大小
+        train_image = shape_image(cut_image_path, img_h=img_h, img_w=int(img_w / cut_num))
         img = (np.expand_dims(train_image, 0))
 
         predictions_single = new_model.predict(img)

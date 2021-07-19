@@ -35,13 +35,13 @@ def ocr_image():
         index = np.argmax(predictions_single[0])
         print(index, characters[index])
         out_str += characters[index]
-    print(out_str, out_str == '0Exk')
+    print('0Exk', out_str, out_str == '0Exk')
 
 
 def ocr_single():
     print("==============加载模型==============")
     new_model = tf.keras.models.load_model(keras_model_path)
-    out_img_path = './ImageToOcr/2.jpg'
+    out_img_path = './ImageToOcr/3.jpg'
     train_image = shape_image(out_img_path, img_h=img_h, img_w=int(img_w / cut_num))
     img = (np.expand_dims(train_image, 0))
 
@@ -91,6 +91,6 @@ def oct_other_img():
 
 
 if __name__ == "__main__":
-    # ocr_image()
+    ocr_image()
     # ocr_single()
-    oct_other_img()
+    # oct_other_img()

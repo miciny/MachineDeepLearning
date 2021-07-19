@@ -3,27 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BostonHousing/..__init__.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BostonHousing/.boston_funcs.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BostonHousing/.boston_learn.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BostonHousing/.boston_model.py.icloud" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/ModelSet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/..__init__.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/.imdb_funcs.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/.imdb_learn.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/.imdb_model.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/.mnist_funcs.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/.mnist_model.py.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuters/..__init__.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuters/.reuters_funcs.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuters/.reuters_learn.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuters/.reuters_model.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/..__init__.py.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/.test.py.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +76,6 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrainSetCreate" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -111,9 +95,6 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ChartLearn" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -133,9 +114,6 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -155,9 +133,6 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ChartLearn" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -221,9 +196,9 @@
       <list>
         <item itemvalue="Python.OcrCodeRun" />
         <item itemvalue="Python.FitSaveModel" />
-        <item itemvalue="Python.mnist_learn" />
         <item itemvalue="Python.CreateCaptcha" />
         <item itemvalue="Python.TrainDataSet" />
+        <item itemvalue="Python.mnist_learn" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626433443149</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="train">
+      <created>1626680285582</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626680285582</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

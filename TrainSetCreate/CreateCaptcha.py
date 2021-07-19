@@ -1,6 +1,7 @@
 import random
 from PIL import Image, ImageFont, ImageDraw
 from Config import *
+import os
 
 
 def get_font_color():
@@ -98,7 +99,7 @@ class Captcha:
         self.line_number = line_number
         self.captcha_size = captcha_size
         self.background_color = background_color
-        self.font_size = font_size
+        self.font_size = font_size  # random.randint(font_size-10, font_size+10)
         self.format = save_format
         if sources:
             self.sources = sources
@@ -134,11 +135,11 @@ class Captcha:
 
             # 保存图片
             if train == 0:
-                save_path = '../Data/Train/{}_captcha{}.png'.format(text, index)
+                save_path = '../Data/Train/{}_{}.png'.format(text, index)
             elif train == 1:
-                save_path = '../Data/Vel/{}_captcha{}.png'.format(text, index)
+                save_path = '../Data/Vel/{}_{}.png'.format(text, index)
             else:
-                save_path = '../Data/Test/{}_captcha{}.png'.format(text, index)
+                save_path = '../Data/Test/{}_{}.png'.format(text, index)
             captcha.save(save_path, format=self.format)
             # 显示图片
             # captcha.show()
@@ -146,7 +147,13 @@ class Captcha:
 
 
 if __name__ == '__main__':
+    if not os.path.exists('../Data/Train'):
+        os.mkdir('../Data/Train')
+    if not os.path.exists('../Data/Vel'):
+        os.mkdir('../Data/Vel')
+    if not os.path.exists('../Data/Test'):
+        os.mkdir('../Data/Test')
     cap_handler = Captcha()
-    # cap_handler.make_captcha(9998)
-    # cap_handler.make_captcha(1000, 1)
-    # cap_handler.make_captcha(1000, 2)
+    cap_handler.make_captcha(5000)
+    cap_handler.make_captcha(500, 1)
+    cap_handler.make_captcha(500, 2)

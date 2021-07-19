@@ -83,7 +83,7 @@ def get_test_data():
     # print(train_images.shape)
     # print(test_images.shape)
 
-    test_images = test_images.reshape((1000 * cut_num, int(img_w / cut_num) * img_h))
+    test_images = test_images.reshape((len(test_images), int(img_w / cut_num) * img_h))
     test_images = test_images.astype('float32') / 255
 
     test_labels = _process_labels(test_labels)

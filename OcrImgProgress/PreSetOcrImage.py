@@ -59,7 +59,7 @@ def resize_image(file_path, out_img_path, img_h=50, img_w=150):
 def shape_image(img_path, img_h=28, img_w=28):
     x_data = []
     origin_img = get_dynamic_binary_image(img_path)                        # 读取图片
-    origin_img = get_static_binary_image(origin_img, out_image_path=img_path)
+    # origin_img = get_static_binary_image(origin_img, out_image_path=img_path)
     origin_img = np.array(origin_img)
     x_data.append(origin_img)
     x_data = np.array(x_data).astype(np.float32)

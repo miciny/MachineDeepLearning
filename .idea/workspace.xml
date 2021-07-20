@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train model">
-      <change afterPath="$PROJECT_DIR$/PredictImages/0dYM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PredictImages/0dYM_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/FitSaveModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/ModelSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/TrainDataSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/6rJH.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/6rJH.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/6rJH_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/6rJH_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/7KE6.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/7KE6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/7KE6_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/7KE6_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/PreSetOcrImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OcrImgProgress/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/CreateCaptcha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/CreateCaptchaV2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/simkai.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/simkai.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OcrImgProgress/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/PreSetOcrImage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626769685205</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="train model">
+      <created>1626777275507</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626777275507</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

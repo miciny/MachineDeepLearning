@@ -3,6 +3,29 @@ import cv2
 from PIL import Image
 
 
+# 轮廓
+def _cut_img_opencv(gray_img, origin_img_path):
+    contours, hierarchy = cv2.findContours(gray_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    print('轮廓数量: ', len(contours))
+
+    cut_path_list = []
+    origin_img = cv2.imread(origin_img_path)            # 读取图片
+
+    size_list = []
+    size_list_temp = dict()
+    for index, contour in enumerate(contours):
+        x, y, w, h = cv2.boundingRect(contour)
+        size_list.append(w * h)
+        size_list_temp[str(w*h)] = (x, y, w, h)
+
+    size_list.sort(reverse=True)
+
+    for index, size in enumerate(size_list[:4]):
+        x, y, w, h = size_list_temp[str(size)]
+        # 只能原图上画，原图上画矩形框
+        cv2.rectangle(origin_img, (x, y), (x + w - 1, y + h - 1), (0, 0, 255), 1)
+
+
 # 手动二值化 翻转黑白
 def get_static_binary_image(gray_img, out_image_path=None, threshold=140, reverse=True):
     w, h = len(gray_img), len(gray_img[0])

@@ -1,8 +1,8 @@
 import os
 import numpy as np
-from OcrImgProgress.PreSetOcrImage import get_dynamic_binary_image
+from Common.PreSetOcrImage import get_dynamic_binary_image
 from Config import img_w, img_h
-from Common.Funcs import text2vec, vec2text
+from Common.Funcs import text2vec
 
 
 # 生成数据集

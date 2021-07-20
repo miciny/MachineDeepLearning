@@ -1,10 +1,10 @@
-from ChartLearn.ModelSet import get_model
-from ChartLearn.TrainDataSet import get_data, get_test_data
+from CaptchaLearn.ModelSet import get_model
+from CaptchaLearn.TrainDataSet import get_data, get_test_data
 import tensorflow as tf
 
 
 # 保存地址
-keras_model_path = "../ChartModel"
+keras_model_path = "../CaptchaModel"
 
 
 def fit_and_save():

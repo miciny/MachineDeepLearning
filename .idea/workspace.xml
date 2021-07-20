@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train">
+    <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train model">
+      <change afterPath="$PROJECT_DIR$/PredictImages/0dYM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PredictImages/0dYM_temp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/ModelSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/FitSaveModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/ModelSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/TrainDataSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartLearn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaModel/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/6rJH.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/6rJH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/6rJH_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/6rJH_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/7KE6.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/7KE6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/7KE6_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/PredictImages/7KE6_temp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/PreSetOcrImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OcrImgProgress/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaLearn/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/CreateCaptcha.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/CreateCaptchaV2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainSetCreate/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainSetCreate/simkai.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/CaptchaCreate/simkai.ttf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +66,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ImageToOcr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PredictImages" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PredictImages" />
       <recent name="$PROJECT_DIR$/ImageToOcr" />
       <recent name="$PROJECT_DIR$/TrainSetCreate" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Utils" />
-      <recent name="$PROJECT_DIR$/MNIST/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Common" />
       <recent name="$PROJECT_DIR$/ImageToOcr" />
       <recent name="$PROJECT_DIR$/ChartLearn" />
       <recent name="D:\GitHub\WorkProject\MyDeepLearning\Test" />
@@ -93,6 +111,9 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ChartLearn" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -112,6 +133,9 @@
       <module name="MyDeepLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ChartLearn" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -306,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626766929240</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="train">
+      <created>1626769454789</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626769454789</updated>
+    </task>
+    <task id="LOCAL-00014" summary="train model">
+      <created>1626769685205</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626769685205</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +367,7 @@
     <MESSAGE value="change" />
     <MESSAGE value="git" />
     <MESSAGE value="train" />
-    <option name="LAST_COMMIT_MESSAGE" value="train" />
+    <MESSAGE value="train model" />
+    <option name="LAST_COMMIT_MESSAGE" value="train model" />
   </component>
 </project>

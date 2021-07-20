@@ -43,7 +43,14 @@ def resize_image(file_path, out_img_path, img_h=50, img_w=150):
 
 # 识别之前 去噪 转为向量
 def shape_image(img_path, img_h=28, img_w=28, out_path=None):
-    origin_img = get_dynamic_binary_image(img_path)                        # 读取图片
+
+    origin_img = cv2.imread(img_path)                        # 读取图片
+    print(origin_img.shape)
+    h, w, t = origin_img.shape
+    if h != img_h or w != img_w:
+        resize_image(img_path, img_path, img_h, img_w)
+
+    origin_img = get_dynamic_binary_image(img_path)  # 读取图片
     if out_path:
         cv2.imwrite(out_path, origin_img)
     # origin_img = get_static_binary_image(origin_img, out_image_path=img_path)

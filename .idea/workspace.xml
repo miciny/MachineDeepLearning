@@ -2,39 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34a921ac-70d8-4796-a3b6-13e53128ff63" name="Default Changelist" comment="train">
-      <change afterPath="$PROJECT_DIR$/ImageToOcr/0bMp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageToOcr/0bMp_temp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageToOcr/0htb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageToOcr/0htb_temp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageToOcr/6rJH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MNIST/funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/FitSaveModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/ModelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/ModelSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartLearn/TrainDataSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartModel/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/ChartModel/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/0Exk_captcha742.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageToOcr/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/mnist_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/mnist_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/model/mnist_model/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/model/mnist_model/variables/variables.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageToOcr/6rJH_temp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageToOcr/7KE6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageToOcr/7KE6_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/0bMp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/0bMp_temp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/0htb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageToOcr/0htb_temp.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/OcrCodeRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrCodeRun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/OcrImgProgress/PreSetOcrImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainSetCreate/CreateCaptcha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainSetCreate/CreateCaptchaV2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626691533382</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="train">
+      <created>1626766450326</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626766450327</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

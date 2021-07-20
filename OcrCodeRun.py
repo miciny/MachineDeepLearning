@@ -15,7 +15,7 @@ def ocr_image():
     new_model = tf.keras.models.load_model(keras_model_path)
 
     print("==============识别==============")
-    real_str = '6rJH'
+    real_str = '7KE6'
     img_path = pro_dir + f'/ImageToOcr/{real_str}.png'
     out_path = pro_dir + f'/ImageToOcr/{real_str}_temp.png'
 

@@ -1,5 +1,5 @@
 from tensorflow import keras
-from Config import characters, char_num
+from Config import characters, char_num, img_w, img_h
 import tensorflow as tf
 
 
@@ -10,17 +10,21 @@ def get_model():
     # 卷积核池化操作尽可能的减少计算量
     # 图片像素不高，所以使用的卷积核和池大小不能太大，优先考虑3 * 3 和5 * 5 的卷积核，池大小使用2 * 2
     # 按照下面的神经网络模型，卷积池化以后的输出应该是128 * 17 * 5 = 10880
-    model.add(tf.keras.layers.Conv2D(32, (3, 3)))
+    model.add(tf.keras.layers.Conv2D(32, (3, 3), input_shape=(img_h, img_w, 1), padding="same"))
     model.add(tf.keras.layers.PReLU())
-    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2))
+    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2, padding="same"))
 
-    model.add(tf.keras.layers.Conv2D(64, (5, 5)))
+    model.add(tf.keras.layers.Conv2D(64, (3, 3), padding="same"))
     model.add(tf.keras.layers.PReLU())
-    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2))
+    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2, padding="same"))
 
-    model.add(tf.keras.layers.Conv2D(128, (5, 5)))
+    model.add(tf.keras.layers.Conv2D(128, (5, 5), padding="same"))
     model.add(tf.keras.layers.PReLU())
-    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2))
+    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2, padding="same"))
+
+    model.add(tf.keras.layers.Conv2D(256, (5, 5), padding="same"))
+    model.add(tf.keras.layers.PReLU())
+    model.add(tf.keras.layers.MaxPool2D((2, 2), strides=2, padding="same"))
 
     # 输出值看成4组，需要将输出值调整为(4, 62)的数组
     model.add(tf.keras.layers.Flatten())
@@ -35,3 +39,8 @@ def get_model():
                   metrics=['accuracy'],
                   loss='categorical_crossentropy')
     return model
+
+
+if __name__ == '__main__':
+    model = get_model()
+    model.summary()

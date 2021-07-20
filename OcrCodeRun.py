@@ -16,6 +16,7 @@ def ocr_image():
 
     print("==============识别==============")
     real_str = '7KE6'
+    # real_str = '6rJH'
     img_path = pro_dir + f'/ImageToOcr/{real_str}.png'
     out_path = pro_dir + f'/ImageToOcr/{real_str}_temp.png'
 

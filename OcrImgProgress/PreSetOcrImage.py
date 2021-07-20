@@ -1,4 +1,3 @@
-import tensorflow as tf
 import numpy as np
 import cv2
 from PIL import Image
@@ -24,6 +23,7 @@ def get_static_binary_image(gray_img, out_image_path=None, threshold=140, revers
     return gray_img
 
 
+# 把图片等分cut_num份
 def cut_image_to_4(gray_img, cut_num=4):
     cut_image_list = []
     h, w = gray_img.shape
@@ -34,21 +34,7 @@ def cut_image_to_4(gray_img, cut_num=4):
     return cut_image_list
 
 
-def shape_mine_img(img_path='', img_h=28, img_w=28):
-    image = tf.io.read_file(img_path)
-    train_images = np.asarray(_preprocess_image(image, img_h=img_h, img_w=img_w))
-    train_images = train_images.reshape((-1, img_h * img_w))
-    return train_images[0]
-
-
-def _preprocess_image(image, img_h=28, img_w=28):
-    image = tf.image.decode_jpeg(image, channels=1)
-    image = tf.image.resize(image, [img_w, img_h])
-    image /= 255.0  # normalize to [0,1] range
-    image = tf.reshape(image, [img_w, img_h])
-    return image
-
-
+# 重新设置图片大小
 def resize_image(file_path, out_img_path, img_h=50, img_w=150):
     image = Image.open(file_path)
     resized_image = image.resize((img_w, img_h), Image.ANTIALIAS)
@@ -56,15 +42,16 @@ def resize_image(file_path, out_img_path, img_h=50, img_w=150):
 
 
 # 识别之前 去噪 转为向量
-def shape_image(img_path, img_h=28, img_w=28):
-    x_data = []
+def shape_image(img_path, img_h=28, img_w=28, out_path=None):
     origin_img = get_dynamic_binary_image(img_path)                        # 读取图片
+    if out_path:
+        cv2.imwrite(out_path, origin_img)
     # origin_img = get_static_binary_image(origin_img, out_image_path=img_path)
     origin_img = np.array(origin_img)
-    x_data.append(origin_img)
-    x_data = np.array(x_data).astype(np.float32)
-    train_images = x_data.reshape((len(x_data), img_w * img_h))
-    return train_images[0]
+    origin_img = origin_img.reshape(img_h, img_w, 1)
+    origin_img = origin_img.astype('float32') / 255
+
+    return origin_img
 
 
 # 自适应阀值二值化 灰度处理

@@ -110,7 +110,7 @@ class Captcha:
         text = random.sample(self.sources, k=self.text_number)
         return ''.join(text)
 
-    def make_captcha(self, num=1, train=0):
+    def make_captcha(self, num=1, out_path=None):
         # 获取验证码的宽度， 高度
         width, height = self.captcha_size
         for index in range(num):
@@ -134,12 +134,7 @@ class Captcha:
             draw_point(draw, 10, width, height)
 
             # 保存图片
-            if train == 0:
-                save_path = '../Data/Train/{}_{}.png'.format(text, index)
-            elif train == 1:
-                save_path = '../Data/Vel/{}_{}.png'.format(text, index)
-            else:
-                save_path = '../Data/Test/{}_{}.png'.format(text, index)
+            save_path = out_path + '/{}_{}.png'.format(text, index)
             captcha.save(save_path, format=self.format)
             # 显示图片
             # captcha.show()
@@ -147,13 +142,17 @@ class Captcha:
 
 
 if __name__ == '__main__':
-    if not os.path.exists('../Data/Train'):
-        os.mkdir('../Data/Train')
-    if not os.path.exists('../Data/Vel'):
-        os.mkdir('../Data/Vel')
-    if not os.path.exists('../Data/Test'):
-        os.mkdir('../Data/Test')
+    train_path = '../Data/Train'
+    vel_path = '../Data/Vel'
+    test_path = '../Data/Test'
+    if not os.path.exists(train_path):
+        os.mkdir(train_path)
+    if not os.path.exists(vel_path):
+        os.mkdir(vel_path)
+    if not os.path.exists(test_path):
+        os.mkdir(test_path)
+
     cap_handler = Captcha()
-    cap_handler.make_captcha(5000)
-    cap_handler.make_captcha(500, 1)
-    cap_handler.make_captcha(500, 2)
+    cap_handler.make_captcha(5000, train_path)
+    cap_handler.make_captcha(500, vel_path)
+    cap_handler.make_captcha(500, test_path)

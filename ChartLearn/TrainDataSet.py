@@ -1,32 +1,12 @@
 import os
 import numpy as np
-from OcrImgProgress.PreSetOcrImage import get_dynamic_binary_image, cut_image_to_4
-from Config import characters, img_w, img_h, cut_num, char_num
-import tensorflow as tf
-import cv2
+from OcrImgProgress.PreSetOcrImage import get_dynamic_binary_image
+from Config import img_w, img_h
+from Common.Funcs import text2vec, vec2text
 
 
-def _process_labels(labels):
-    """将标签字符转换成数字张量"""
-    # 构建字符索引
-    num_letter_dict = dict(enumerate(list(characters)))
-    letter_num_dict = dict(zip(num_letter_dict.values(), num_letter_dict.keys()))
-
-    ret = []
-    for label in labels:
-        arr = [letter_num_dict[i] for i in label]
-        ret.append(arr)
-
-    return np.array(ret)
-
-
+# 生成数据集
 def _gen_train_data(file_path):
-    """
-    生成数据集
-    :param file_path: 存filePath文件夹获取全部图片处理
-    :return: x_data:图片数据，shape=(num, 20, 80),y_data:标签信息, shape=(num, 4)
-    """
-
     # 返回指定的文件夹包含的文件或文件夹的名字的列表。
     train_file_name_list = os.listdir(file_path)
     # 返回值
@@ -38,71 +18,45 @@ def _gen_train_data(file_path):
         if selected_train_file_name.endswith('.png'):
             # 获取图片对象
             origin_img_path = os.path.join(file_path, selected_train_file_name)
-            # 对图片去噪，后面对这个方法单独说明
+            # 对图片去噪，
             captcha_image = get_dynamic_binary_image(origin_img_path)
-            # img_np = np.array(captcha_image)
-            # x_data.append(img_np)
+            img_np = np.array(captcha_image)
+            x_data.append(img_np)
 
-            # 切割图片 实际上识别单字母
-            captcha_image_cut_list = cut_image_to_4(captcha_image)
-            for i, captcha_image_cut in enumerate(captcha_image_cut_list):
-                img_np = np.array(captcha_image_cut)
-                x_data.append(img_np)
-
-            name_list = list(selected_train_file_name.split('_')[0])
-            y_temp = np.array(name_list)
-            # train_labels = _process_labels(name_list)
-            # y_temp = np.array(train_labels)
-            # y_data.append(y_temp)
-            for y in y_temp:
-                y_data.append(y)
-
-    x_data = np.array(x_data).astype(np.float32)
-    y_data = np.array(y_data)
+            # 标签处理成【4， 62】张量
+            name = selected_train_file_name.split('.')[0].split('_')[0]
+            train_labels = text2vec(name)
+            y_data.append(train_labels)
     return x_data, y_data
 
 
+# 拿到原始数据后，进行处理
+def _get_data(path):
+    (images, labels) = _gen_train_data(path)
+    images = np.array(images).astype(np.float32)
+    labels = np.array(labels)
+    images = images.reshape((len(images), img_h, img_w, 1))
+    images = images.astype('float32') / 255
+    # print(images.shape)
+    # print(labels.shape)
+    # print(labels[0])
+    # print(vec2text(labels[0]))
+    return images, labels
+
+
+# 训练和测试集数据
 def get_data():
-    # 生成训练集--train_data_dir(训练文件验证码路径)
-    (train_images, train_labels) = _gen_train_data('../Data/Train')
-    # 生成测试集--test_data_dir(测试文件验证码路径)
-    (vel_images, vel_labels) = _gen_train_data('../Data/Vel')
-    # print(train_images.shape)
-    # print(vel_images.shape)
-
-    train_images = train_images.reshape((len(train_images), int(img_w / cut_num) * img_h))
-    train_images = train_images.astype('float32') / 255
-    vel_images = vel_images.reshape((len(vel_images), int(img_w / cut_num) * img_h))
-    vel_images = vel_images.astype('float32') / 255
-
-    train_labels = _process_labels(train_labels)
-    vel_labels = _process_labels(vel_labels)
-    train_labels = tf.keras.utils.to_categorical(train_labels)
-    vel_labels = tf.keras.utils.to_categorical(vel_labels)
-    # train_labels = train_labels.reshape((len(train_labels), char_num * len(characters)))
-    # vel_labels = vel_labels.reshape((len(vel_labels), char_num * len(characters)))
-
-    print(train_images.shape)
-    print(train_labels.shape)
-
+    (train_images, train_labels) = _get_data('../Data/Train')
+    (vel_images, vel_labels) = _get_data('../Data/Vel')
     return train_images, train_labels, vel_images, vel_labels
 
 
+# 测试集数据
 def get_test_data():
-    # 生成测试集--test_data_dir(测试文件验证码路径)
-    (test_images, test_labels) = _gen_train_data('../Data/Test')
-    # print(train_images.shape)
-    # print(test_images.shape)
-
-    test_images = test_images.reshape((len(test_images), int(img_w / cut_num) * img_h))
-    test_images = test_images.astype('float32') / 255
-
-    test_labels = _process_labels(test_labels)
-    test_labels = tf.keras.utils.to_categorical(test_labels)
-    # test_labels = test_labels.reshape((len(test_labels), char_num * len(characters)))
-
+    (test_images, test_labels) = _get_data('../Data/Test')
     return test_images, test_labels
 
 
 if __name__ == '__main__':
     get_data()
+    get_test_data()

@@ -12,12 +12,12 @@ def fit_and_save():
     train_images, train_labels, vel_images, vel_labels = get_data()
 
     print("==============训练中==============")
-    history = model.fit(train_images, train_labels, epochs=20, batch_size=128)
-    print(history)
+    history = model.fit(train_images, train_labels, epochs=10, batch_size=128)
+    print(history.history)
 
     print("==============测试训练集==============")
     test_loss, test_acc = model.evaluate(vel_images, vel_labels)
-    print("test_acc:", test_acc)
+    print("test_loss, test_acc:", test_loss, test_acc)
 
     print("==============保存模型==============")
     model.save(keras_model_path)  # save() should be called out of strategy scope
@@ -31,7 +31,7 @@ def load_and_test():
 
     print("==============测试训练集==============")
     test_loss, test_acc = new_model.evaluate(test_images, test_labels, verbose=2)
-    print("new_model test_acc:", test_acc)
+    print("new_model test_loss/test_acc:", test_loss, test_acc)
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ import tensorflow as tf
 from Utils.ShowPlot import show_image, plot_value_array
 from tensorflow import keras
 import numpy as np
-from OcrImgProgress.PreSetOcrImage import shape_mine_img, cut_image_to_4, get_dynamic_binary_image
+from MNIST.funcs import shape_mine_img
 
 
 # 保存地址
@@ -56,10 +56,11 @@ def fit_and_save():
 
     print("==============训练中==============")
     history = model.fit(train_images, train_labels, epochs=5, batch_size=128)
+    print(history.history)
 
     print("==============测试训练集==============")
     test_loss, test_acc = model.evaluate(test_images, test_labels)
-    print("test_acc:", test_acc)
+    print("test_loss, test_acc:", test_loss, test_acc)
 
     print("==============保存模型==============")
     model.save(keras_model_path)  # save() should be called out of strategy scope
@@ -73,7 +74,7 @@ def load_and_test():
 
     print("==============测试训练集==============")
     test_loss, test_acc = new_model.evaluate(test_images, test_labels)
-    print("new_model test_acc:", test_acc)
+    print("new_model test_loss, test_acc:", test_loss, test_acc)
 
 
 def ocr_image():
@@ -98,6 +99,6 @@ def ocr_image():
 
 if __name__ == "__main__":
     # _data_and_pre()
-    # fit_and_save()
+    fit_and_save()
     # load_and_test()
-    ocr_image()
+    # ocr_image()
